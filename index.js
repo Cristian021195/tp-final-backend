@@ -5,7 +5,7 @@ import path from "path"
 import 'dotenv/config'
 import './src/database/dbConnection'
 import productosRouter from './src/routes/productos.routes'
-//import usuariosRouter from './src/routes/usuarios.routes'
+import usuariosRouter from './src/routes/usuarios.routes'
 import notasRouter from './src/routes/notas.routes'
 import tareasRouter from './src/routes/tareas.routes'
 import coloresRouter from './src/routes/colores.routes'
@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, '/public'))) // Esto nos permite pod
 //rutas
 // http://localhost:4000/apicafe/productos
 app.use('/api', productosRouter)
-//app.use('/api/auth', usuariosRouter)
+app.use('/api/usuarios', usuariosRouter)
 app.use('/api/notas', notasRouter)
 app.use('/api/tareas', tareasRouter)
 app.use('/api/colores', coloresRouter)
