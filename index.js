@@ -9,6 +9,7 @@ import productosRouter from './src/routes/productos.routes'
 import notasRouter from './src/routes/notas.routes'
 import tareasRouter from './src/routes/tareas.routes'
 import coloresRouter from './src/routes/colores.routes'
+import recetasRouter from './src/routes/recetas.routes'
 
 //usar un puerto
 const app = express();
@@ -32,3 +33,4 @@ app.use('/api', productosRouter)
 app.use('/api/notas', notasRouter)
 app.use('/api/tareas', tareasRouter)
 app.use('/api/colores', coloresRouter)
+app.use('/api/recetas', recetasRouter)
